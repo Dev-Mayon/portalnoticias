@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    padding-top: 70px; /* Ajuste o valor conforme necessário */
+    position: relative; /* Adiciona contexto de empilhamento */
+    z-index: 1000; /* Garante que o header esteja acima de outros elementos */
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+/* Garantir que o time dentro de articles e outros contextos não tenha fundo */
+time {
+    background-color: transparent !important; /* Remove fundo */
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit; /* Mantém a cor do texto igual ao do pai */
+    display: inline; /* Mantém o elemento inline se for necessário */
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: relative; /* Certifica que eles não afetam o layout ao redor */
+}
+
+/* Garantir que time dentro de articles não tenha fundo */
+article time {
+    background-color: transparent !important;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit; /* Mantém a cor do texto igual ao do pai */
+}
+
+header h1, footer p {
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    background-color: #333; /* Adicionado para garantir que o fundo do menu seja visível */
+    position: fixed; /* Torna o menu fixo */
+    width: 100%; /* Garante que o menu ocupe toda a largura da tela */
+    top: 0; /* Posiciona o menu no topo da página */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 70px 20px 20px; /* Ajuste do padding para compensar o menu fixo */
+}
+
+/* Estilo base para todas as seções */
+section {
+    margin-bottom: 40px; /* Espaço entre seções */
+}
+
+/* Estilo para o título de cada seção */
+section h2 {
+    display: block; /* Exibe o título como um bloco */
+    border-bottom: 2px solid #333; /* Linha abaixo do título */
+    padding-bottom: 10px; /* Espaço entre o título e as notícias */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Garante que a section tenha um container flexível */
+.news-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte quando necessário */
+    gap: 20px; /* Espaçamento entre os artigos */
+}
+
+/* Estilo para cada artigo */
+article {
+    flex: 1 1 calc(33.333% - 20px); /* Ajusta a largura dos artigos para ocupar 1/3 do container com espaçamento */
+    box-sizing: border-box; /* Garante que o padding e a borda não aumentem a largura do item */
+    margin-bottom: 20px; /* Espaçamento entre os artigos na mesma linha */
+    background-color: #f9f9f9; /* Fundo leve para os artigos */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Padding interno do artigo */
+}
+
+/* Ajuste de tamanho das imagens dentro dos artigos */
+article img {
+    width: 100%; /* Faz com que a imagem ocupe a largura total do artigo */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* Estilo para o título e o texto dentro dos artigos */
+article h3, article p {
+    margin: 10px 0; /* Ajusta o espaçamento acima e abaixo do texto */
+}
+
+/* Estilo base para todos os botões "Ler mais" */
+.btn-ler-mais {
+    display: inline-block;
+    padding: 8px 12px; /* Ajusta o padding */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    text-align: center;
+    color: #fff;
+    text-decoration: none; /* Remove a decoração do texto */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Cor para Esportes */
+.btn-sports {
+    background-color: green;
+}
+
+/* Cor para Economia */
+.btn-economy {
+    background-color: blue;
+}
+
+/* Cor para Entretenimento */
+.btn-entertainment {
+    background-color: orange;
+}
+
+/* Cor para Tecnologia */
+.btn-technology {
+    background-color: purple;
+}
+
+/* Tamanhos específicos de botões */
+.btn-small {
+    padding: 6px 10px; /* Menos padding para botões menores */
+    font-size: 12px; /* Menor tamanho da fonte */
+}
+
+/* Efeito de hover para todos os botões */
+.btn-ler-mais:hover {
+    opacity: 0.8;
+}
+
+/* Estilo do título da seção */
+section h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* Espaço entre o texto e a linha */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 24px; /* Tamanho da fonte do título */
+}
+
+#sports {
+    background-color: #d0f0c0; /* Verde claro */
+    padding: 20px; /* Adicione um padding se necessário */
+    border-radius: 5px; /* Opcional: bordas arredondadas */
+}
+
+/* Estilo para a seção de economia */
+#economy {
+    background-color: #add8e6; /* Azul claro */
+    padding: 20px; /* Adicione um padding se necessário */
+    border-radius: 5px; /* Opcional: bordas arredondadas */
+}
+
+/* Estilo para a seção de entretenimento */
+#entretenimento {
+    background-color: #ffcc99; /* Laranja claro */
+    padding: 20px; /* Adicione um padding se necessário */
+    border-radius: 5px; /* Opcional: bordas arredondadas */
+}
+
+/* Estilo para a seção de tecnologia */
+#tecnologia {
+    background-color: #e6e6fa; /* Roxo claro */
+    padding: 20px; /* Adicione um padding se necessário */
+    border-radius: 5px; /* Opcional: bordas arredondadas */
+}
+
+/* Estilo para o time abaixo da imagem */
+article time {
+    display: block;
+    font-size: 0.9em; /* Reduz o tamanho da fonte */
+    color: #000; /* Ajuste a cor do texto se necessário */
+    background-color: #fff; /* Define o fundo como branco */
+    padding: 5px; /* Adiciona um pouco de padding */
+    margin
+}
+
+/* Estilo para os cards de notícias */
+.news-container article {
+    background-color: #333; /* Cor de fundo igual ao menu e footer */
+    color: #fff; /* Cor do texto para contraste com o fundo escuro */
+    padding: 15px; /* Espaçamento interno para o card */
+    border-radius: 5px; /* Bordas arredondadas para um visual mais suave */
+    margin-bottom: 20px; /* Espaçamento entre os cards */
+}
+
+/* Ajustes específicos para a data e hora */
+.news-container time {
+    display: block;
+    font-size: 0.9em;
+    color: #fff; /* Cor do texto da data e hora para contraste com o fundo escuro */
+    margin-bottom: 10px; /* Espaço abaixo da data e hora */
+}
+
+/* Remover margens e preenchimentos das seções */
+section {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
